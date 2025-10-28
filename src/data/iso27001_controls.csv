@@ -1,0 +1,40 @@
+Clause ID,Title,Description,Expected Evidence,Category
+4.1,Understanding the organization and its context,Determine internal and external issues that are relevant to the organization’s purpose and that affect its ability to achieve the intended outcome(s) of the ISMS.,"SWOT analysis, context documentation, stakeholder maps",Clause
+4.2,Understanding the needs and expectations of interested parties,Determine interested parties and their relevant information security requirements.,"SWOT analysis, context documentation, stakeholder maps",Clause
+4.3,Determining the scope of the information security management system,Define the boundaries and applicability of the ISMS.,"SWOT analysis, context documentation, stakeholder maps",Clause
+4.4,Information security management system,"Establish, implement, maintain and continually improve the ISMS.","SWOT analysis, context documentation, stakeholder maps",Clause
+5.1,Leadership and commitment,Top management must demonstrate leadership and commitment to the ISMS.,"Management meeting records, policy document, role assignments",Clause
+5.2,Policy,Top management shall establish an information security policy aligned with the strategic direction.,"Management meeting records, policy document, role assignments",Clause
+5.3,"Organizational roles, responsibilities and authorities",Roles related to information security must be assigned and communicated.,"Management meeting records, policy document, role assignments",Clause
+6.1.1,Actions to address risks and opportunities,Plan actions to manage risks and opportunities for achieving ISMS objectives.,"Risk registers, risk assessment reports, treatment plans",Clause
+6.1.2,Information security risk assessment,Define and apply a process for periodic risk assessment.,"Risk registers, risk assessment reports, treatment plans",Clause
+6.1.3,Information security risk treatment,Define and apply a process for treating identified risks.,"Risk registers, risk assessment reports, treatment plans",Clause
+6.2,Information security objectives and planning to achieve them,Establish measurable security objectives and plans to meet them.,"Risk registers, risk assessment reports, treatment plans",Clause
+6.3,Planning of changes,Manage changes to the ISMS in a planned manner.,"Risk registers, risk assessment reports, treatment plans",Clause
+7.1,Resources,Determine and provide resources for the ISMS.,"Training logs, communication records, document control logs",Clause
+7.2,Competence,Ensure that relevant personnel are competent.,"Training logs, communication records, document control logs",Clause
+7.3,Awareness,Ensure personnel are aware of information security responsibilities.,"Training logs, communication records, document control logs",Clause
+7.4,Communication,Determine internal and external communication relevant to the ISMS.,"Training logs, communication records, document control logs",Clause
+7.5.1,Documented information – General,Maintain documented information as required by ISO 27001.,"Training logs, communication records, document control logs",Clause
+7.5.2,Creating and updating,"Ensure documents are appropriately identified, formatted and reviewed.","Training logs, communication records, document control logs",Clause
+7.5.3,Control of documented information,Ensure documents are adequately protected and accessible.,"Training logs, communication records, document control logs",Clause
+8.1,Operational planning and control,Plan and control ISMS processes.,"Procedure documents, implementation records, risk logs",Clause
+8.2,Information security risk assessment,Perform risk assessments at defined intervals.,"Procedure documents, implementation records, risk logs",Clause
+8.3,Information security risk treatment,Implement the risk treatment plan.,"Procedure documents, implementation records, risk logs",Clause
+9.1,"Monitoring, measurement, analysis and evaluation",Determine what and how to monitor and evaluate ISMS performance.,"Audit reports, performance dashboards, review minutes",Clause
+9.2,Internal audit,Conduct periodic internal audits to ensure ISMS compliance.,"Audit reports, performance dashboards, review minutes",Clause
+9.3.1,Management review – General,Top management must review the ISMS.,"Audit reports, performance dashboards, review minutes",Clause
+9.3.2,Management review – Inputs,Define inputs for the ISMS review.,"Audit reports, performance dashboards, review minutes",Clause
+9.3.3,Management review – Results,Document decisions and actions from ISMS reviews.,"Audit reports, performance dashboards, review minutes",Clause
+10.1,Continual improvement,Improve the effectiveness of the ISMS.,"Corrective action plans, improvement records, logs",Clause
+10.2,Nonconformity and corrective action,React to nonconformities and take corrective actions.,"Risk Register, Corrective action plans, improvement records, logs",Clause
+Annex A 5.1,Policies for information security,"Information security policies shall be defined, approved by management, published, communicated, and reviewed.",,Annex A
+Annex A 5.2,Information security roles and responsibilities,Security roles and responsibilities shall be defined and allocated.,,Annex A
+Annex A 5.3,Segregation of duties,Conflicting duties and responsibilities shall be segregated.,,Annex A
+Annex A 5.7,Threat intelligence,Threat intelligence shall be collected and analyzed to manage security risks.,,Annex A
+Annex A 5.12,Classification of information,"Information shall be classified based on confidentiality, integrity, and availability.",,Annex A
+Annex A 5.25,Assessment and decision on information security events,Security events shall be assessed and categorized.,,Annex A
+Annex A 5.35,Independent review of information security,Independent reviews of the ISMS shall be conducted.,,Annex A
+Annex A 6.1,Screening,Background checks shall be carried out for personnel.,,Annex A
+Annex A 7.1,Physical security perimeters,Security perimeters shall be established to protect information.,,Annex A
+Annex A 8.1,User end point devices,End user devices shall be protected against threats.,,Annex A
