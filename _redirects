@@ -1,0 +1,9 @@
+# Redirect all HTTP to HTTPS
+http://*        https://:splat     301!
+
+# Redirect Netlify subdomain to custom domain
+https://brahmagrid.netlify.app/*        https://brahmagrid.com/:splat     301!
+https://www.brahmagrid.netlify.app/*    https://brahmagrid.com/:splat     301!
+
+# Redirect www.brahmagrid.com to brahmagrid.com (optional, but good for consistency)
+https://www.brahmagrid.com/*            https://brahmagrid.com/:splat     301!
