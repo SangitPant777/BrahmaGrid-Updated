@@ -166,7 +166,7 @@ export const generateGapAssessmentExcel = async (
   }
   
   doc.setTextColor(255, 215, 0);
-  doc.setFontSize(20);
+  doc.setFontSize(17);
   doc.setFont('helvetica', 'bold');
   doc.text('ISO 27001 Compliance Gap Assessment', pageWidth / 2, 15, { align: 'center' });
   
