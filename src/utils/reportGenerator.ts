@@ -48,7 +48,7 @@ export const generateSoAPDF = async (
   doc.rect(0, 0, pageWidth, 35, 'F');
   if (brahmaLogo) {
     try {
-      doc.addImage(brahmaLogo, 'PNG', 15, 8, 20, 20);
+      doc.addImage(brahmaLogo, 'PNG', 15, 6, 25, 25);
     } catch (error) { console.error('Error adding BrahmaGrid logo:', error); }
   }
   doc.setTextColor(255, 215, 0);
