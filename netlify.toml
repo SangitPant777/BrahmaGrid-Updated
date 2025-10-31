@@ -1,0 +1,26 @@
+# Redirect all HTTP to HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
+
+# Redirect Netlify subdomain to custom domain
+[[redirects]]
+  from = "https://brahmagrid.netlify.app/*"
+  to = "https://brahmagrid.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.brahmagrid.netlify.app/*"
+  to = "https://brahmagrid.com/:splat"
+  status = 301
+  force = true
+
+# Redirect www.brahmagrid.com to brahmagrid.com
+[[redirects]]
+  from = "https://www.brahmagrid.com/*"
+  to = "https://brahmagrid.com/:splat"
+  status = 301
+  force = true
