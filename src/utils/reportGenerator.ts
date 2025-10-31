@@ -713,7 +713,7 @@ export const generateMeetingMinutesPDF = async (
       }
       doc.setFont('helvetica', 'bold');
       doc.setFontSize(11);
-      doc.text('Action Items:', 20, y);
+      doc.text('Responsible Person:', 20, y);
       y += 5;
 
       doc.setFont('helvetica', 'normal');
