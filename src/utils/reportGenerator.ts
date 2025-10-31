@@ -624,8 +624,11 @@ export const generateMeetingMinutesPDF = async (
   }
 
   if (meetingPurpose) {
-    doc.text(`Purpose of the Meeting: ${meetingPurpose}`, 15, y);
-    y += 8;
+    const text = `Purpose of the Meeting: ${meetingPurpose}`;
+    const maxWidth = pageWidth - 30; // 15px margin on each side
+    const wrappedText = doc.splitTextToSize(text, maxWidth);
+    doc.text(wrappedText, 15, y);
+    y += wrappedText.length * 8; // Adjust spacing as needed
   }
 
   // ===== AGENDA SECTIONS =====
@@ -638,9 +641,15 @@ export const generateMeetingMinutesPDF = async (
     // Agenda header (gold bar)
     doc.setFillColor(255, 215, 0);
     doc.rect(15, y - 5, pageWidth - 30, 7, 'F');
+    
+    // Text styling for the header
     doc.setTextColor(30, 30, 30);
     doc.setFontSize(12);
+    doc.setFont('helvetica', 'bold'); // <-- Make the header bold
+    
     doc.text(`Agenda ${index + 1}: ${agenda.title || agenda.topic || 'N/A'}`, 20, y);
+    
+    doc.setFont('helvetica', 'normal'); // <-- Reset to normal for following text
     y += 10;
 
     // Attendees
