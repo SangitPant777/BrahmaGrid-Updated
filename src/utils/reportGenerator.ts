@@ -662,48 +662,62 @@ export const generateMeetingMinutesPDF = async (
     }
 
     // Discussion 
-    doc.setFont('helvetica', 'bold');
-    doc.setFontSize(11);
-    doc.text('Discussion:', 20, y);
-    y += 5;
-    
-    doc.setFont('helvetica', 'normal');
-    doc.setFontSize(10);
-    const discussionLines = doc.splitTextToSize(agenda.discussion || 'N/A', pageWidth - 40);
-    discussionLines.forEach((line: string) => {
-      if (y > pageHeight - 30) {
-        doc.addPage();
-        y = 20;
-      }
-      doc.text(line, 20, y); // aligned as paragraph (no bullets)
-      y += 5;
-    });
-    y += 3;
-    
-    // Key Decisions
-    if (agenda.actionItems) {
-      if (y > pageHeight - 40) {
-        doc.addPage();
-        y = 20;
-      }
-      doc.setFont('helvetica', 'bold');
-      doc.setFontSize(11);
-      doc.text('Key Decisions:', 20, y);
-      y += 5;
-    
-      doc.setFont('helvetica', 'normal');
-      doc.setFontSize(10);
-      const actionLines = doc.splitTextToSize(agenda.actionItems, pageWidth - 40);
-      actionLines.forEach((line: string) => {
-        if (y > pageHeight - 30) {
-          doc.addPage();
-          y = 20;
-        }
-        doc.text(line, 20, y); // aligned as paragraph (no bullets)
-        y += 5;
-      });
-      y += 3;
+    // Discussion 
+doc.setFont('helvetica', 'bold');
+doc.setFontSize(11);
+doc.text('Discussion:', 20, y);
+y += 5;
+
+doc.setFont('helvetica', 'normal');
+doc.setFontSize(10);
+
+const discussionText = (agenda.discussion || 'N/A')
+  .replace(/•/g, '')        // remove any existing bullet symbols
+  .replace(/\r?\n+/g, ' '); // replace newlines with spaces
+
+const discussionLines = doc.splitTextToSize(discussionText, pageWidth - 40);
+
+discussionLines.forEach((line: string) => {
+  if (y > pageHeight - 30) {
+    doc.addPage();
+    y = 20;
+  }
+  doc.text(line, 20, y);
+  y += 5;
+});
+y += 3;
+
+// Key Decisions
+if (agenda.actionItems) {
+  if (y > pageHeight - 40) {
+    doc.addPage();
+    y = 20;
+  }
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(11);
+  doc.text('Key Decisions:', 20, y);
+  y += 5;
+
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(10);
+
+  const actionText = (agenda.actionItems || '')
+    .replace(/•/g, '')
+    .replace(/\r?\n+/g, ' ');
+
+  const actionLines = doc.splitTextToSize(actionText, pageWidth - 40);
+
+  actionLines.forEach((line: string) => {
+    if (y > pageHeight - 30) {
+      doc.addPage();
+      y = 20;
     }
+    doc.text(line, 20, y);
+    y += 5;
+  });
+  y += 3;
+}
+
 
     // Responsible Person
     if (agenda.responsiblePerson || agenda.responsible) {
