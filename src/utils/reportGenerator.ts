@@ -661,12 +661,12 @@ export const generateMeetingMinutesPDF = async (
       y += 7;
     }
 
-    // Discussion
+    // Discussion 
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(11);
     doc.text('Discussion:', 20, y);
     y += 5;
-
+    
     doc.setFont('helvetica', 'normal');
     doc.setFontSize(10);
     const discussionLines = doc.splitTextToSize(agenda.discussion || 'N/A', pageWidth - 40);
@@ -675,11 +675,11 @@ export const generateMeetingMinutesPDF = async (
         doc.addPage();
         y = 20;
       }
-      doc.text(`• ${line}`, 25, y);
+      doc.text(line, 20, y); // aligned as paragraph (no bullets)
       y += 5;
     });
     y += 3;
-
+    
     // Key Decisions
     if (agenda.actionItems) {
       if (y > pageHeight - 40) {
@@ -690,7 +690,7 @@ export const generateMeetingMinutesPDF = async (
       doc.setFontSize(11);
       doc.text('Key Decisions:', 20, y);
       y += 5;
-
+    
       doc.setFont('helvetica', 'normal');
       doc.setFontSize(10);
       const actionLines = doc.splitTextToSize(agenda.actionItems, pageWidth - 40);
@@ -699,7 +699,7 @@ export const generateMeetingMinutesPDF = async (
           doc.addPage();
           y = 20;
         }
-        doc.text(`• ${line}`, 25, y);
+        doc.text(line, 20, y); // aligned as paragraph (no bullets)
         y += 5;
       });
       y += 3;
